@@ -4,5 +4,8 @@ export const useEventStore = defineStore('EventStore', {
     state()=> ({
         events: [],
         event: {}
-    })
+    }),
+        getters: {
+    numberOfEvents: state => state.events.length
+}
 })

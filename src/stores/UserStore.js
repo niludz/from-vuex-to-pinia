@@ -7,6 +7,11 @@ export const useUserStore = defineStore('UserStore', {
     //     }
     // }
     state: () => ({
-        user: 'wrj'
-    })
+        user: "w rj"
+    }),
+    getters: {
+        firstName() {
+            return this.user.split(' ')[0]
+        }
+    }
 })
